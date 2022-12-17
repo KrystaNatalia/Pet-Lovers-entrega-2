@@ -1,0 +1,384 @@
+/*inicio*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyConHeader{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 65px 400px auto 80px;
+    grid-template-areas:"nav   nav     nav nav"
+                        "header header header header"
+                        "main   main   main main" 
+                        "footer footer footer footer";
+}
+
+
+@media (max-width:820px){
+    .bodyConHeader{
+    grid-template-rows: 65px 450px auto 80px;
+    }
+}
+@media (max-width:450px){
+    .bodyConHeader{
+        grid-template-rows: 65px 450px auto 110px;
+        }
+}
+.bodySinHeader{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 65px auto 80px;
+    grid-template-areas:"nav    nav    nav nav"
+                        "main   main   main main"
+                        "footer footer footer footer";
+}
+
+@media(max-width:820px){
+    .bodySinHeader{
+        grid-template-rows: 40px auto 80px;
+    }
+}
+
+
+
+/*nav*/
+
+.navegador{
+    grid-area: nav;
+    background-color:#3AB4F2;;
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navegador .fa-bars{
+    display: none;
+}
+
+.navegador ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navegador ul li a {
+    display: block;
+    text-decoration: none;
+    justify-content: end;
+    font-size: 25px;
+    color: #000;
+    padding: 5px 30px; 
+    font-family: 'Lato', sans-serif;
+}
+
+.navegador a:hover{
+    color: #fff;
+}
+
+.navegador .logo{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.navegador .logo h3{
+    color: #000;
+}
+
+.navegador .logo img{
+    height: 40px;
+    margin-right: 5px;
+}
+
+@media(max-width:820px){
+    .navegador .fa-bars{
+        display: block;
+        font-size: 50px;
+        padding: 10px;
+    }
+    .navegador ul{
+        position: fixed;
+        top: 0px;
+        left: -300px;
+        width: 250px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 100px;
+        row-gap: 50px;
+        background-color:#3AB4F2;
+        transition: 0.2s;
+    }
+    .navegador .fa-bars:hover +ul {
+        left: 0px;
+    }
+
+    .navegador >ul:hover{
+        left: 0;
+    } 
+}
+
+
+/*header*/
+
+
+.encabezado{
+    grid-area: header;
+    background-image: url(../img/headerImg4.jpg);
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    
+}
+
+.encabezadoInfo p{
+    font-size: 30px;
+    margin: 10px 20px;
+
+}
+
+.encabezadoInfo h1{
+    font-family: 'Mukta', sans-serif;
+}
+.encabezadoInfo{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    
+}
+
+@media (max-width:820px){
+    .encabezado{
+        background-image: url(../img/header400px.jpg);
+    }
+    .encabezadoInfo h1{
+        padding-bottom: 30px;
+    
+    }
+        
+}
+
+@media(max-width:460px){
+    
+    .encabezadoInfo h1{
+        padding-top: 40px;
+        font-size: 30px;
+        margin: 0;
+    }
+   .encabezadoInfo p{
+        font-size: 25px;
+   }
+}
+
+
+/*main*/
+
+main{
+    background-color: #EDEDED;
+    grid-area: main;
+}
+header h1{
+    padding: 15px;
+    font-size: 40px;
+    font-family: 'Mukta', sans-serif;
+}
+h1{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+}
+h2{
+    padding-top: 10px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;    
+}
+
+.destacada{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.destacados{
+    text-align: center;
+    box-shadow: #000;
+    width: 300px;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    padding: 15px;
+    margin: 30px 0px;
+    box-shadow: 10px 10px 10px rgba(0 0 0 /50%);
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+.img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+}
+.rating{
+    align-items: center;
+    width: 40%;
+    padding: 5px;
+}
+
+button,.btn{
+    margin-left: 95px;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #F2DF3A;
+
+}
+.tarjeta{
+    text-align: center;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 15px;
+    margin: 30px 15px;
+    box-shadow: 10px 10px 10px rgba(0 0 0 /50%);
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: #0078AA;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.iconos{
+    font-size: 30px; 
+    display: flex;
+    justify-content: center;
+}
+.fa-instagram , .fa-facebook-f , .fa-twitter , .fa-youtube{
+    padding: 15px;
+}
+
+@media (max-width:450px){
+    .redes > p{
+        font-size: 20px;
+    }
+}
+
+/*Adopcion*/
+
+.encabezadoAdopcion{
+    grid-area: header;
+    background-image: url(../img/header2.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.encabezadoAdopcion button{
+    align-items: center;
+}
+.encabezado-info p{
+    font-size: 20px;
+    margin: 10px 20px;
+}
+
+
+
+
+.adopcion{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.candidatos{
+    width: 400px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden
+    padding 15px;
+    margin: 30px 20px;
+
+}
+main p{
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 15px ;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.candidatos p{
+    padding: 10px 0px;
+}
+
+/*contacto*/
+
+form label input{
+    display: block;
+    margin: 10px;
+    padding: 5px 0px;
+    font-size: 15px;
+}
+form label{
+    font-family:'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+textarea{
+    display: block;
+    margin: 10px 10px;
+    height: 100px;
+    width: 250px;
+    font-size: 15px;
+}
+
+form{
+    padding: 20px;
+}
+
+.mapa{
+    height: 400px;
+    margin: 20px;
+}
+
+.sucursales{
+    display: flex;
+}
+.ubicacion{
+    height: 30px;
+    margin: 0px 10px;
+}
+
+
+
+
