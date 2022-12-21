@@ -175,7 +175,7 @@
 
 @media (max-width:820px){
     .encabezado{
-        background-image: url(../img/header400px.jpg);
+        background-image: url(../img/header4.jpg);
         color: #000;
     }
     .encabezadoInfo h1{
@@ -281,7 +281,7 @@ h3{
     button,.btn{
         width: 100%;
         margin: 0;
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 .tarjeta{
@@ -369,6 +369,9 @@ footer{
         border: none;
 
     }
+    .encabezadoAdopcion{
+        background-image: url(../img/header3.jpg);
+    }
 }
 .encabezadoInfo a:hover{
     background-color: #F2DF3A;
@@ -434,6 +437,16 @@ main p{
         object-fit: cover;
 
     }
+    main p{
+        font-size: 30px;
+    }
+    .candidatos h3{
+        font-size: 30px;
+        text-align: center;
+    }
+   .candidatos p{
+    font-size: 30px;
+   }
 }
 
 /*contacto*/
