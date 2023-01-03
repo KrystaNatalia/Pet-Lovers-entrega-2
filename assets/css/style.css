@@ -59,7 +59,7 @@
     display: flex;
     justify-content: space-between;
 }
-.navegador .bi-list{
+.navegador i{
     display: none;
 }
 
@@ -103,7 +103,7 @@
 }
 
 @media screen and (max-width:820px){
-    .navegador .bi-list{
+    .navegador i{
         display: block;
         font-size: 50px;
         padding: 10px;
