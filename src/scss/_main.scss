@@ -1,0 +1,27 @@
+main{
+    background-color: #EDEDED;
+    grid-area: main;
+    h1{
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Mukta', sans-serif;
+    }
+    h2{
+        padding-top: 10px;
+        font-family: 'Mukta', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    }
+}
+
+
+
+

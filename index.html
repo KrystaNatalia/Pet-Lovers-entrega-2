@@ -11,28 +11,34 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bodyConHeader">
-    <nav class="navegador">
-      <label class="labelMenu" for="menu"><i class="fa-solid fa-bars"></i></label>
-      <input class="inputMenu" type="checkbox" id="menu">
-        <div class="logo">
-            <img src="./assets/img/logo.png">
-            <h3>Pet Lovers</h3>
-        </div>
+  <nav class="nav">
+    <div class="nav__container">
+      <div class="nav__logo"> 
+        <img src="./assets/img/logo.png">
+        <h3>Pet Lovers</h3>
+      </div>
+      <label for="menu" class="nav__label">
+        <img src="assets/menu.svg" class="nav__img">
+      </label>
+      <input type="checkbox" id="menu" class="nav__input">
+      <div class="nav__menu">
         <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./pages/perros.html">Perros</a></li>
-            <li><a href="./pages/gatos.html">Gatos</a></li>
-            <li><a href="./pages/adopcion.html">Adopción</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li> 
-         </ul>
-    </nav>
-    <header class="encabezado">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+          <li><a href="./index.html" class="nav__item">Inicio</a></li>
+          <li><a href="./pages/perros.html"class="nav__item">Perros</a></li>
+          <li><a href="./pages/gatos.html"class="nav__item">Gatos</a></li>
+          <li><a href="./pages/adopcion.html"class="nav__item">Adopcion</a></li>
+          <li><a href="./pages/contacto.html"class="nav__item">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="encabezado">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="10000">
                 <img src="./assets/img/carrusel1.jpg" class="d-block w-100">
@@ -67,30 +73,30 @@
           </div>
     </header>
     
-    <main>
+    <main class="cards">
         <h2>Destacados de la semana</h2>
         <section class="destacada">
             <div class="destacados">
-                <img class="img" src="/assets/img/paseo.png">
+                <img class="img" src="/assets/img/paseo.png" alt="set correa y collar para paseo">
                 <h3>Set paseo</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="destacados">
-                <img class="img" src="/assets/img/alimento.png">
+                <img class="img" src="/assets/img/alimento.png" alt="alimento de perro 3kg">
                 <h3>Excellency 3KG</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="destacados">
-                <img class="img" src="/assets/img/snacks.png">
+                <img class="img" src="/assets/img/snacks.png" alt="snacks para perros" >
                 <h3>Snacks pack de 5</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="destacados">
-                <img class="img" src="/assets/img/raton.png">
-                <h3>Juguete raton</h3>
+                <img class="img" src="/assets/img/catnip.png" alt="catnip para gatos" >
+                <h3>Catnip 10 gr</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
@@ -98,19 +104,19 @@
         <h2>Productos Recientes</h2>
         <section class="productos">
             <div class="tarjeta">
-                <img class="img" src="/assets/img/setjuguetes.png">
+                <img class="img" src="/assets/img/setjuguetes.png" alt="set jueguetes para gatos">
                 <h3>Set jueguetes para gatos</h3>
                 <img class="rating" src="../assets/img/four-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="../assets/img/pretal.png">
+                <img class="img" src="../assets/img/pretal.png" alt="pretal para perros" >
                 <h3>Pretal acolchonado</h3>
                 <img class="rating" src="../assets/img/four-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/bozal.png">
+                <img class="img" src="/assets/img/bozal.png" alt="bozal de plastico">
                 <h3>Bozal de plastico</h3>
                 <img class="rating" src="../assets/img/four-rating.png">
                 <button class="btn">comprar</button>

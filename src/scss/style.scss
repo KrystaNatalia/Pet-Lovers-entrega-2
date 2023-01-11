@@ -1,0 +1,30 @@
+@import "reset";
+@import "nav";
+@import "header";
+@import "cards";
+@import "adopcion";
+@import "footer";
+@import "body";
+@import "main";
+@import "formulario";
+
+    
+
+
+
+.mapa{
+    height: 400px;
+    margin: 20px;
+}
+
+.sucursales{
+    display: flex;
+}
+.ubicacion{
+    height: 30px;
+    margin: 0px 10px;
+}
+
+
+
+

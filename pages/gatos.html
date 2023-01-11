@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Lovers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="bodyConHeader">
-    <nav class="navegador">
-        <i class="bi bi-list"></i>
-        <div class="logo">
+    <nav class="nav">
+        <div class="nav__container">
+          <div class="nav__logo"> 
             <img src="../assets/img/logo.png">
             <h3>Pet Lovers</h3>
+          </div>
+          <label for="menu" class="nav__label">
+            <img src="../assets/menu.svg" class="nav__img">
+          </label>
+          <input type="checkbox" id="menu" class="nav__input">
+          <div class="nav__menu">
+            <ul>
+                <li><a href="../index.html" class="nav__item">Inicio</a></li>
+                <li><a href="../pages/perros.html"class="nav__item">Perros</a></li>
+                <li><a href="../pages/gatos.html"class="nav__item">Gatos</a></li>
+                <li><a href="../pages/adopcion.html"class="nav__item">Adopcion</a></li>
+                <li><a href="../pages/contacto.html"class="nav__item">Contacto</a></li>
+              </ul>
+          </div>
         </div>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./perros.html">Perros</a></li>
-            <li><a href="./gatos.html">Gatos</a></li>
-            <li><a href="./adopcion.html">Adopción</a></li>
-            <li><a href="./contacto.html">Contacto</a></li> 
-         </ul>
     </nav>
     <header class="encabezado2">
     </header>
@@ -32,19 +39,19 @@
         <h1>Alimento para gatos</h1>
         <section class="productos">
             <div class="tarjeta">
-                <img class="img" src="/assets/img/catfood.png">
+                <img class="img" src="/assets/img/catfood.png" alt="comida blanda para gatos 3kg">
                 <h3>Happy whiskers 3KG</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/catfood2.png">
+                <img class="img" src="/assets/img/catfood2.png" alt="comida blanda para gots 100g">
                 <h3>Lata alimento blando 100G</h3>
                 <img class="rating" src="../assets/img/four-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/catfood3.png">
+                <img class="img" src="/assets/img/catfood3.png" alt="comida seca 10KG">
                 <h3>Little fishes 10KG</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
@@ -53,19 +60,19 @@
         <h2>Accesorios</h2> 
         <section class="productos"> 
             <div class="tarjeta">
-                <img class="img" src="/assets/img/catnip.png">
+                <img class="img" src="/assets/img/catnip.png"  alt="catnip para gatos" >
                 <h3>Catnip deshidratado</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/setjuguetes.png">
+                <img class="img" src="/assets/img/setjuguetes.png"  alt="set jueguetes para gatos">
                 <h3>Set juguetes para gatos</h3>
                 <img class="rating" src="../assets/img/four-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/collargato.png">
+                <img class="img" src="/assets/img/collargato.png" alt="collar con campanita">
                 <h3>Collar con campanita</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
@@ -74,19 +81,19 @@
         <h2>Para el Hogar</h2>
         <section class="productos">
             <div class="tarjeta">
-                <img class="img" src="/assets/img/cama2.png">
+                <img class="img" src="/assets/img/cama2.png" alt="cama con plumas">
                 <h3>Cama con plumas</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/plato.png">
+                <img class="img" src="/assets/img/plato.png" alt="plato para alimentos">
                 <h3>Comedero</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
             </div>
             <div class="tarjeta">
-                <img class="img" src="/assets/img/rascador.png">
+                <img class="img" src="/assets/img/rascador.png" alt="rascador tamaño pequeño">
                 <h3>Rascador pequeño</h3>
                 <img class="rating" src="../assets/img/five-rating.png">
                 <button class="btn">comprar</button>
