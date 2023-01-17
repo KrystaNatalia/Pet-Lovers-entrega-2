@@ -1,10 +1,11 @@
 .nav{
     grid-area: nav;
-    background-color:#3AB4F2;;
+    background-color:#3AB4F2;
     padding: 10px 0;
+    
     .nav__container{
-        display: flex;  
         width: 100%;
+        display: flex;  
         justify-content: space-between;
         .nav__logo{
             display: flex;

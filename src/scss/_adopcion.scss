@@ -16,6 +16,8 @@
         overflow: hidden;
         padding: 15px;
         margin: 30px 20px;
+        background: radial-gradient(#111 50%, #000 100%);
+        position: relative;
         @media screen and (max-width:1075px){
             width: 100%;
             margin: 50px 40px;
@@ -24,6 +26,12 @@
             width: 100%;
             height: 400px;
             object-fit: cover;
+            transform: scale(1.3);
+            transition: 0.3s ease-out;
+            &:hover{ 
+                transform: scale (1.1) translatey(-20px);
+                opacity: 0.3;
+            }
             @media screen and (max-width:1075px){
               .imgAdopcion{
                     height: 500px;
@@ -31,22 +39,68 @@
                 }  
             }
         }
-        >p{
-            padding: 10px 0px;
-            @media screen and (max-width:1075px){
-                font-size: 30px;
-            }
-        }
-        >h3{
+        .descripcion{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            padding: 15px;
             text-align: center;
-            @media screen and (max-width:1075px){
-                font-size: 30px;
-                text-align: center;
+            color: #fff;
+            font-size: 18px;
+           >h3{
+                margin: 0 0 20px;
+                transform: translateY(30px);
+                opacity: 0;
+                font-weight: 700;
+                @media screen and (max-width:1075px){
+                    font-size: 30px;
+                    text-align: center;
+                }
+            } 
+            >p{
+                transform: translateY(30px);
+                opacity: 0;
+                @media screen and (max-width:1075px){
+                    font-size: 30px;
+                }
+            }
+            
+            >a{
+                text-decoration: none;
+                color: #000;
+                background-color: #F2DF3A;
+                padding: 10px;
+                cursor: pointer;
+                display: inline-block;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transform: translateY(30px);
+                opacity: 0;
+                &:hover{
+                    background: #cfbf2e;
+                }
             }
         }
-
+        &:hover .descripcion{
+            h3{
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.3s ease-out;
+            }
+            p{
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.3s ease-out 0.2s;
+            }
+            a{
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.3s ease-out 0.4s;
+            }
+        }
     }
-
 }
 
 .introduccion p{

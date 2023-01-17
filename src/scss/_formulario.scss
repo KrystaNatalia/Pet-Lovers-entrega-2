@@ -1,6 +1,5 @@
 .formulario{
     margin: 30px auto;
-    width: 900px;
     box-shadow: 0px 0px 10px 10px rgba(0 0 0/20%);
     border: #000;
     border-radius: 5px;
@@ -9,60 +8,60 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: 1fr 1fr 1fr 60px;
-    grid-template-areas:  "titulo      titulo"
-                          "nombre      email" 
-                          "comentario  comentario"
-                          "button      button";
+    grid-template-areas:  "zona1     zona1"
+                          "zona2     zona3" 
+                          "zona4     zona4"
+                          "zona5     zona5";
     @media screen and (max-width:800px){
         box-shadow: none;
         grid-template-columns: 1fr 1fr;
         grid-auto-flow: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:  "titulo      titulo"
-                              "nombre      nombre" 
-                              "email       email"
-                              "comentario  comentario"
-                              "button      button";
+        grid-template-areas:  "zona1      zona1"
+                              "zona2      zona2" 
+                              "zona3      zona3"
+                              "zona4      zona4"
+                              "zona5      zona5";
     }
-    >h1{
-        grid-area: titulo;
-        margin-bottom: 10px;
+    @for $var from 1 to 6{
+        @if ($var == 1){
+           h2:nth-child(1){
+                grid-area: zona1;
+                margin-bottom: 10px;
+            } 
+        }
+        @else if ($var ==5){
+            button:nth-child(5){
+                grid-area: zona5;
+                width: 200px;
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 15px;
+                font-weight: bold;
+                background-color: #F2DF3A;
+                margin: 30px 0;
+                @media screen and (max-width:800px){
+                    width: 100%;
+                } 
+            }
+        }
+        @else{
+            label:nth-child(#{$var}){
+                grid-area: zona#{$var};
+            }
+        }
+    }
+    input , textarea{
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid black;
+        outline: none;
+        margin-top: 10px;
     }
     label{
         display: flex;
         flex-direction: column;
-        padding: 10px;
         font-family: 'Mukta', sans-serif;
-        :nth-child(2){
-            grid-area: nombre;
-        }
-        :nth-child(3){
-            grid-area: email;
-        }
-        :nth-child(4){
-            grid-area: comentario;
-        }
-        input , textarea{
-            background-color: transparent;
-            border: 0;
-            border-bottom: 1px solid black;
-            outline: none;
-            margin-top: 10px;
-        }
     }
-    button:nth-child(5){
-        grid-area: button;
-        width: 200px;
-        border: none;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        background-color: #F2DF3A;
-        margin: 30px 0;
-        @media screen and (max-width:800px){
-            width: 100%;
-        } 
-    }
-    
 }
                         
